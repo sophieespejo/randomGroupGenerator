@@ -20,12 +20,14 @@ function GetLocalStorage()
 function saveToLocalStorage()
 {
     localStorage.setItem('addedNames', JSON.stringify(groupNames));
+    return groupNames;
 }
 
 function saveToLocalStorageByPersonName(personName)
 {
     groupNames.push(personName);
     localStorage.setItem('addedNames', JSON.stringify(groupNames));
+    return groupNames;
 }
 
 function removeFromLocalStorage(personName){
@@ -36,6 +38,9 @@ function removeFromLocalStorage(personName){
     groupNames.splice(nameIndex, 1);
     //updates local storage
     saveToLocalStorage();
+    return groupNames;
 }
+
+
 
 export {saveToLocalStorageByPersonName, GetLocalStorage,  removeFromLocalStorage, groupNames}

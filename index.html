@@ -29,16 +29,18 @@
         <div class="row mt-3 justify-content-center">
             <div class="col-10">
                 <div class="row justify-content-around">
-                    <div class="col-5">
+                    <div class="col-5 d-flex">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="">Group size:</span>
-                            <input type="text" class="form-control" placeholder="number of people in each group" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="number of people in each group" id="groupSizeTxt">
+                            <button type="button" class="btn btn-info" id="groupSizeBtn">Info</button>
                         </div>
                     </div>
-                    <div class="col-5">
+                    <div class="col-5 d-flex">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="">Number of groups:</span>
-                            <input type="text" class="form-control" placeholder="total number of groups" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="number of groups" id="groupNumTxt">
+                            <button type="button" class="btn btn-info" id="groupNumBtn">Info</button>
                         </div>
                     </div>
                 </div>
@@ -48,6 +50,21 @@
             <div class="col-6 text-center">
                 <h3>People on list:</h3>
                 <div class="list-group" id="injectHere">
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-10">
+                <div class="row justify-content-center" id="injectGroupsHere">
+                    <div class="col-2">
+                        <!-- <ul class="list-group">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                        </ul> -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
