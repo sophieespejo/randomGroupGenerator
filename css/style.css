@@ -1,0 +1,45 @@
+@font-face{
+    font-family: 'SuperMario';
+    src:url("/fonts/SuperMario256.ttf");
+}
+
+body{
+    background-image: url("/tmp.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    background-color: #98dcdf;
+    font-family: 'SuperMario';
+}
+
+.list-group{
+    opacity: 80%;
+}
+
+.yellowBg{
+    background-color: #fce681;
+    border-radius: 10px;
+}
+
+.whiteFont{
+    color: rgb(11, 11, 11);
+    font-size:1.5rem;
+}
+
+ul.no-bullets{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+.groupTxt{
+    background-color: white;
+    font-size: 1.8rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nameTxt{
+    font-size: 1.5rem;
+}
+

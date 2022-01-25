@@ -28,30 +28,74 @@ function getRandomStudent(groupNames)
 
 function sortArrayBySize(rNumArr, size){
     let newArr = [];
-    //so the loop goes thru the length of arr
-    while(rNumArr.length)
+    debugger
+    // //so the loop goes thru the length of arr
+    // let groupsNum = Math.ceil(rNumArr.length / size);
+    for(let i = 0; i < rNumArr.length; i+= size)
     {
-        //slice rNumArr starting at 0 to size and pushes it to an array
-        newArr.push(
-            rNumArr.splice(0, size)
-        )
+        let chunk = rNumArr.slice(i, i +size);
+        newArr.push(chunk);
     }
-    // console.log(newArr);
-    // console.log(newArr.length);
+
+    console.log(newArr);
+    // // console.log(newArr.length);
+
     createGroups(newArr, groupNames);
 }
 
 function sortArrayByNumberOfGroups(rNumArr, groupsNum)
 {
     let newArr = [];
-    let groupSize = Math.ceil(rNumArr.length / groupsNum);
-    while(rNumArr.length)
+    for(let i =0; i<groupsNum; i++)
     {
-        newArr.push(rNumArr.splice(0, groupSize))
+        let groupArr = [];
+        newArr.push(groupArr);
     }
+    // debugger
+    let j = 0
+    for ( let i = 0; i < rNumArr.length; i++ ) {
+        
+        newArr[j].push(rNumArr[i])
+        j++;
+
+        if (j >= groupsNum) {
+            j = 0;
+        }
+
+    }
+    
+
+
     console.log(newArr);
-    createGroups(newArr, groupNames);
+    // let groupSize = Math.ceil(rNumArr.length / groupsNum);
+    // while(rNumArr.length)
+    // {
+    //     newArr.push(rNumArr.splice(0, groupSize))
+    // }
+
+
+    // debugger
+    // for(let i = 0; i < rNumArr.length; i += groupSize)
+    // {
+    //     let chunk = rNumArr.slice(i, i + groupSize);
+    //     newArr.push(chunk);
+    // }
+    // console.log(newArr);
+     createGroups(newArr, groupNames);
+
+
+    //remaining students
+    // for(let i = 0; i < groupsNum; i++)
+    // {
+    //     let chunk = rNumArr.slice(i, 1);
+    //     newArr[i].push(chunk);
+    // }
 
     return newArr;
+}
+
+function createDesiredNumOfArrs(numberWanted)
+{
+
 }
 export {randomNamesIntoArray, sortArrayBySize, rNumArr, sortArrayByNumberOfGroups, newArr}
