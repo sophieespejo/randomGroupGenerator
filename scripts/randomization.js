@@ -15,7 +15,7 @@ function randomNamesIntoArray(groupNames)
             rNumArr.push(rNum)
         }
     }
-    // console.log(rNumArr);
+    console.log(rNumArr);
     return rNumArr;
 }
 
@@ -30,12 +30,20 @@ function sortArrayBySize(rNumArr, size){
     let newArr = [];
     debugger
     // //so the loop goes thru the length of arr
-    // let groupsNum = Math.ceil(rNumArr.length / size);
-    for(let i = 0; i < rNumArr.length; i+= size)
+    let intSize = parseInt(size);
+        //figure out how many groups need to be created based on size
+    let groupsNum = Math.ceil(rNumArr.length / size);
+    console.log(groupsNum);
+    for (let i = 0; i < rNumArr.length; i += intSize)
     {
-        let chunk = rNumArr.slice(i, i +size);
-        newArr.push(chunk);
+          let chunk = rNumArr.slice(i, i + intSize);
+            newArr.push(chunk);
     }
+    // for(let i = 0; i < rNumArr.length; i+= size)
+    // {
+    //     let chunk = rNumArr.slice(i, i +size);
+    //     newArr.push(chunk);
+    // }
 
     console.log(newArr);
     // // console.log(newArr.length);
@@ -43,6 +51,12 @@ function sortArrayBySize(rNumArr, size){
     createGroups(newArr, groupNames);
 }
 
+function sortArrayByNumberOfGroups(numArr, size){
+    
+}
+
+
+//this is if it was intentional
 function sortArrayByNumberOfGroups(rNumArr, groupsNum)
 {
     let newArr = [];
